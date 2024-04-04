@@ -1,0 +1,115 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model IEnumerable<News.Core.Entities.Category>
+
+<script src="~/ckeditor/ckeditor.js"></script>
+<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Bài viết /</span> Thêm mới</h4>
+
+<p>
+    Thêm mới bài viết
+</p>
+
+<!-- Icon container -->
+<div class="d-flex flex-wrap" id="icons-container">
+    <div class="row" style="width: 100%;">
+        <div class="col-md-12">
+            <div class="card mb-12">
+                <form asp-action="CreateNews" asp-controller="Admin" method="post">
+                    <div class="card-body">
+                    <div>
+                        <label for="defaultFormControlInput" class="form-label">Tiêu đề bài viết</label>
+                        <input type="text" name="Title" class="form-control" id="defaultFormControlInput" placeholder="Tiêu đề bài viết" aria-describedby="defaultFormControlHelp">
+                    </div>
+                    <div>
+                        <label for="defaultFormControlInput" class="form-label">Chọn danh mục</label>
+                        <select id="defaultSelect" name="CategoryId" class="form-select">
+                            @foreach(var category in Model)
+                            {
+                            <option value="@category.Id">@category.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Hình ảnh chính</label>
+                        <input class="form-control" type="file" id="thumbnail" name="File" hidden>
+                        <img style="width:30%; height:auto;" src="https://www.eventbrite.com/engineering/wp-content/uploads/engineering/2018/08/Flexible-Reusable-React-File-Uploader.png" class="img-thumbnail" id="preview-image">
+                        <input class="form-control" type="text" id="image" name="Image" hidden>
+
+                      </div>
+                      <div class="mb-3">
+                        <label for="formFile" class="form-label">Lấy URL hình ảnh</label>
+                        <input class="form-control" type="file" id="child-image" name="File">
+                      </div>
+                    <div>
+                        <label for="defaultFormControlInput" class="form-label">Nội dung</label>
+                        <textarea class="form-control" name="Content" rows="10" placeholder="Nội dung bài viết" aria-describedby="defaultFormControlHelp"></textarea>
+                    </div>
+                    <div style="margin-top: 10px; float:right; margin-bottom: 10px;">
+                        <button type="submit" class="btn btn-primary">Thêm mới bài viết</button>
+                    </div>
+                </div>
+            
+                </form>
+                </div>
+        </div>
+        
+    </div>
+</div>
+<script>  
+    config.width
+            CKEDITOR.replace("Content");  
+</script>
+<script>
+    $(document).ready(function(){
+        $("#preview-image").click(function(){
+            $('#thumbnail').trigger('click');
+        });
+
+        $("#child-image").change(function() {
+            let url = '@Url.Action("UploadFile","Admin")';
+            var formData = new FormData();
+            var file = $("#child-image").prop("files")[0];
+            formData.append("file",file);
+            $.ajax({
+                    url: url,
+                    type: "POST",
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    enctype: 'multipart/form-data',
+                    data: formData,
+                    success: function (data) {
+                        navigator.clipboard.writeText(data.url);
+                        toastMixin.fire({
+                            title: 'Đã sao chép URL vào bộ nhớ tạm.',
+                            icon: 'success'
+                        });
+                    }
+                });
+        });
+
+        $("#thumbnail").change(function() {
+            let url = '@Url.Action("UploadFile","Admin")';
+            var formData = new FormData();
+            var file = $("#thumbnail").prop("files")[0];
+            formData.append("file",file);
+            $.ajax({
+                    url: url,
+                    type: "POST",
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    enctype: 'multipart/form-data',
+                    data: formData,
+                    success: function (data) {
+                        $("#preview-image").attr('src',data.url);
+                        $("#image").val(data.url);
+
+                    }
+                });
+        });
+    });
+    
+</script>

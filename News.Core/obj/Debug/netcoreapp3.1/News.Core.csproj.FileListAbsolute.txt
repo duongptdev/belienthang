@@ -1,0 +1,16 @@
+D:\Project\edu-mark\src\News.Core\bin\Debug\netcoreapp3.1\News.Core.deps.json
+D:\Project\edu-mark\src\News.Core\bin\Debug\netcoreapp3.1\News.Core.runtimeconfig.json
+D:\Project\edu-mark\src\News.Core\bin\Debug\netcoreapp3.1\News.Core.runtimeconfig.dev.json
+D:\Project\edu-mark\src\News.Core\bin\Debug\netcoreapp3.1\News.Core.dll
+D:\Project\edu-mark\src\News.Core\bin\Debug\netcoreapp3.1\News.Core.pdb
+D:\Project\edu-mark\src\News.Core\bin\Debug\netcoreapp3.1\News.Common.dll
+D:\Project\edu-mark\src\News.Core\bin\Debug\netcoreapp3.1\News.Common.pdb
+D:\Project\edu-mark\src\News.Core\obj\Debug\netcoreapp3.1\News.Core.csproj.AssemblyReference.cache
+D:\Project\edu-mark\src\News.Core\obj\Debug\netcoreapp3.1\News.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\edu-mark\src\News.Core\obj\Debug\netcoreapp3.1\News.Core.AssemblyInfoInputs.cache
+D:\Project\edu-mark\src\News.Core\obj\Debug\netcoreapp3.1\News.Core.AssemblyInfo.cs
+D:\Project\edu-mark\src\News.Core\obj\Debug\netcoreapp3.1\News.Core.csproj.CoreCompileInputs.cache
+D:\Project\edu-mark\src\News.Core\obj\Debug\netcoreapp3.1\News.Core.csproj.CopyComplete
+D:\Project\edu-mark\src\News.Core\obj\Debug\netcoreapp3.1\News.Core.dll
+D:\Project\edu-mark\src\News.Core\obj\Debug\netcoreapp3.1\News.Core.pdb
+D:\Project\edu-mark\src\News.Core\obj\Debug\netcoreapp3.1\News.Core.genruntimeconfig.cache

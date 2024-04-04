@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "feac4ae7-877a-4f11-bc1f-9df9c2a51be1": {
+      "ProjectGuid": "feac4ae7-877a-4f11-bc1f-9df9c2a51be1",
+      "DisplayName": "Mas.Core",
+      "ColorIndex": 0
+    },
+    "e0bdef7f-bb3b-45e7-8b4b-58a3868523c4": {
+      "ProjectGuid": "e0bdef7f-bb3b-45e7-8b4b-58a3868523c4",
+      "DisplayName": "Mas.Web",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "400433ef-af95-4ba9-b87a-ca39eefe4395": {
+      "ProjectGuid": "400433ef-af95-4ba9-b87a-ca39eefe4395",
+      "DisplayName": "Mas.Common",
+      "ColorIndex": 2
+    },
+    "5d0a238a-e5f4-4a0e-85ac-3fcefad10333": {
+      "ProjectGuid": "5d0a238a-e5f4-4a0e-85ac-3fcefad10333",
+      "DisplayName": "Mas.Application",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

@@ -1,0 +1,10 @@
+D:\Project\edu-mark\src\News.Common\bin\Debug\netcoreapp3.1\News.Common.deps.json
+D:\Project\edu-mark\src\News.Common\bin\Debug\netcoreapp3.1\News.Common.dll
+D:\Project\edu-mark\src\News.Common\bin\Debug\netcoreapp3.1\News.Common.pdb
+D:\Project\edu-mark\src\News.Common\obj\Debug\netcoreapp3.1\News.Common.csproj.AssemblyReference.cache
+D:\Project\edu-mark\src\News.Common\obj\Debug\netcoreapp3.1\News.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\edu-mark\src\News.Common\obj\Debug\netcoreapp3.1\News.Common.AssemblyInfoInputs.cache
+D:\Project\edu-mark\src\News.Common\obj\Debug\netcoreapp3.1\News.Common.AssemblyInfo.cs
+D:\Project\edu-mark\src\News.Common\obj\Debug\netcoreapp3.1\News.Common.csproj.CoreCompileInputs.cache
+D:\Project\edu-mark\src\News.Common\obj\Debug\netcoreapp3.1\News.Common.dll
+D:\Project\edu-mark\src\News.Common\obj\Debug\netcoreapp3.1\News.Common.pdb

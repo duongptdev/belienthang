@@ -1,0 +1,221 @@
+﻿@{
+ViewData["Title"] = "Index";
+Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model News.Application.ViewModels.SettingViewModel
+<style>
+    .card-body{
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+</style>
+<div class="row mb-5">
+    <h5>1. Tiêu đề trang</h5>
+    <input id="path_@Model.Header.Id" type="text" value="@Model.Header.Image" hidden>
+    <div class="col-md">
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <input class="form-control thumbnail" data="@Model.Header.Id" id="file_@Model.Header.Id" type="file"
+                        value="@Model.Header.Image" name="File" hidden>
+                    <img class="card-img card-img-left image" data="@Model.Header.Id" id="image_@Model.Header.Id"
+                        src="@Model.Header.Image" alt="Card image">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-fullname">Nội dung</label>
+                            <input type="text" id="content_@Model.Header.Id" value="@Model.Header.Content"
+                                class="form-control" placeholder="Nội dung tiêu đề"
+                                aria-describedby="defaultFormControlHelp">
+
+                        </div>
+                        <div style="margin-top: 10px; float:right; margin-bottom: 10px;">
+                            <button type="submit" data="@Model.Header.Id" class="btn btn-primary save">Lưu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <h5>2. Nội dung giới thiệu</h5>
+    <input id="path_@Model.Summary.Id" type="text" value="@Model.Summary.Image" hidden>
+    <div class="col-md">
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <label class="form-label" for="basic-default-fullname">Tiêu đề</label>
+                        <input type="text" id="title_@Model.Summary.Id" value="@Model.Summary.Title"
+                            class="form-control" placeholder="Nội dung tiêu đề"
+                            aria-describedby="defaultFormControlHelp">
+
+                    </div>
+                    <div class="card-body">
+                        <label class="form-label" for="basic-default-fullname">Nội dung</label>
+                        <input type="text" id="content_@Model.Summary.Id" value="@Model.Summary.Content"
+                            class="form-control" placeholder="Nội dung tiêu đề"
+                            aria-describedby="defaultFormControlHelp">
+
+                    </div>
+                    <div class="card-body row">
+                        <div class="col-md-6">
+                            <label class="form-label" for="basic-default-fullname">Giá trị 1</label>
+                            <input type="text" id="valueFirst_@Model.Summary.Id" value="@Model.Summary.ValueFirst"
+                                class="form-control" placeholder="Nội dung"
+                                aria-describedby="defaultFormControlHelp">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="basic-default-fullname">Nội dung 1</label>
+                            <input type="text" id="textFirst_@Model.Summary.Id" value="@Model.Summary.TextFirst"
+                                class="form-control" placeholder="Nội dung"
+                                aria-describedby="defaultFormControlHelp">
+                        </div>
+                    </div>
+                    <div class="card-body row">
+                        <div class="col-md-6">
+                            <label class="form-label" for="basic-default-fullname">Giá trị 2</label>
+                            <input type="text" id="valueSecond_@Model.Summary.Id" value="@Model.Summary.ValueSecond"
+                                class="form-control" placeholder="Nội dung tiêu đề"
+                                aria-describedby="defaultFormControlHelp">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="basic-default-fullname">Nội dung 2</label>
+                            <input type="text" id="textSecond_@Model.Summary.Id" value="@Model.Summary.TextSecond"
+                                class="form-control" placeholder="Nội dung tiêu đề"
+                                aria-describedby="defaultFormControlHelp">
+                        </div>
+                    </div>
+                    <div class="card-body row">
+                        <div class="col-md-6">
+                            <label class="form-label" for="basic-default-fullname">Giá trị 3</label>
+                            <input type="text" id="valueThird_@Model.Summary.Id" value="@Model.Summary.ValueThrid"
+                                class="form-control" placeholder="Nội dung tiêu đề"
+                                aria-describedby="defaultFormControlHelp">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="basic-default-fullname">Nội dung 3</label>
+                            <input type="text" id="textThird_@Model.Summary.Id" value="@Model.Summary.TextThrid"
+                                class="form-control" placeholder="Nội dung tiêu đề"
+                                aria-describedby="defaultFormControlHelp">
+                        </div>
+                    </div>
+
+                    <button style="margin: 10px; float:right;" type="submit" data="@Model.Summary.Id" class="btn btn-primary save">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <h5>3. Ảnh cuối trang</h5>
+    <input id="path_@Model.Footer.Id" type="text" value="@Model.Footer.Image" hidden>
+    <div class="col-md">
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <input class="form-control thumbnail" data="@Model.Footer.Id" id="file_@Model.Footer.Id" type="file"
+                        value="@Model.Footer.Image" name="File" hidden>
+                    <img class="card-img card-img-left image" data="@Model.Footer.Id" id="image_@Model.Footer.Id"
+                        src="@Model.Footer.Image" alt="Card image">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <div class="mb-3">
+
+                        </div>
+                        <div style="margin-top: 10px; float:right; margin-bottom: 10px;">
+                            <button type="submit" data="@Model.Header.Id" class="btn btn-primary save">Lưu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".image").click(function () {
+            let id = $(this).attr("data");
+            $(`#file_${id}`).trigger('click');
+        });
+
+
+        $(".thumbnail").change(function () {
+            let url = '@Url.Action("UploadFile","Admin")';
+            var formData = new FormData();
+            var file = $(this).prop("files")[0];
+            formData.append("file", file);
+            let id = $(this).attr("data");
+            $.ajax({
+                url: url,
+                type: "POST",
+                cache: false,
+                processData: false,
+                contentType: false,
+                enctype: 'multipart/form-data',
+                data: formData,
+                success: function (data) {
+                    $(`#image_${id}`).attr("src", data.url);
+                    $(`#path_${id}`).val(data.url);
+                }
+            });
+        });
+
+        $(".save").click(function () {
+            let url = '@Url.Action("UpdateSetting","Admin")';
+            let id = $(this).attr("data");
+            let path = $(`#path_${id}`).val();
+            let content = $(`#content_${id}`).val();
+            let title = $(`#title_${id}`).val();
+
+            let valueFirst = $(`#valueFirst_${id}`).val();
+            let textFirst = $(`#textFirst_${id}`).val();
+
+            let valueSecond = $(`#valueSecond_${id}`).val();
+            let textSecond = $(`#textSecond_${id}`).val();
+
+            let valueThird = $(`#valueThird_${id}`).val();
+            let textThird = $(`#textThird_${id}`).val();
+
+
+            let request = {
+                id: id,
+                image: path ?? "",
+                content: content ?? "",
+                title : title ?? "",
+
+                valueFirst : valueFirst ?? "0",
+                textFirst :textFirst ?? "",
+
+                valueSecond : valueSecond ?? "0",
+                textSecond : textSecond ?? "",
+
+                valueThird : valueThird ?? "0",
+                textThird : textThird ?? ""
+            };
+
+            $.ajax({
+                url: url,
+                type: "POST",
+                dataType: "json",
+                traditional: true,
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(request),
+                success: function (data) {
+                    $(`#image_${id}`).attr("src", data.url);
+                    $(`#path_${id}`).val(data.url);
+                    toastMixin.fire({
+                        title: 'Cập nhật thành công.',
+                        icon: 'success'
+                    });
+                }
+            });
+        })
+    })
+</script>

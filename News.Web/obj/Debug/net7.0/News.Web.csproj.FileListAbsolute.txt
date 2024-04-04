@@ -1,0 +1,8 @@
+D:\Project\edu-mark\src\News.Web\obj\Debug\net7.0\News.Web.csproj.AssemblyReference.cache
+D:\Project\edu-mark\src\News.Web\obj\Debug\net7.0\News.Web.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\edu-mark\src\News.Web\obj\Debug\net7.0\News.Web.AssemblyInfoInputs.cache
+D:\Project\edu-mark\src\News.Web\obj\Debug\net7.0\News.Web.AssemblyInfo.cs
+D:\Project\edu-mark\src\News.Web\obj\Debug\net7.0\News.Web.csproj.CoreCompileInputs.cache
+D:\Project\edu-mark\src\News.Web\obj\Debug\net7.0\News.Web.MvcApplicationPartsAssemblyInfo.cache
+D:\Project\edu-mark\src\News.Web\obj\Debug\net7.0\News.Web.RazorAssemblyInfo.cache
+D:\Project\edu-mark\src\News.Web\obj\Debug\net7.0\News.Web.RazorAssemblyInfo.cs

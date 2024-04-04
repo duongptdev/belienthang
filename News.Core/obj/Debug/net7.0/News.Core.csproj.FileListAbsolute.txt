@@ -1,0 +1,5 @@
+D:\Project\edu-mark\src\News.Core\obj\Debug\net7.0\News.Core.csproj.AssemblyReference.cache
+D:\Project\edu-mark\src\News.Core\obj\Debug\net7.0\News.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\edu-mark\src\News.Core\obj\Debug\net7.0\News.Core.AssemblyInfoInputs.cache
+D:\Project\edu-mark\src\News.Core\obj\Debug\net7.0\News.Core.AssemblyInfo.cs
+D:\Project\edu-mark\src\News.Core\obj\Debug\net7.0\News.Core.csproj.CoreCompileInputs.cache

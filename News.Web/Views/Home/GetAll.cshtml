@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model News.Application.ViewModels.NewsViewModel
+<div class="bradcam_area breadcam_bg overlay2">
+         <h3>Tin tức</h3>
+     </div>
+<section class="blog_area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-5 mb-lg-0">
+                <div class="blog_left_sidebar">
+                    @foreach(var news in Model.News.Items)
+                    {
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+                                <img class="card-img rounded-0" src="@news.Image" alt="">
+                                <a href="#" class="blog_item_date">
+                                    <h3>@(news.Date.Value.ToString("dd"))</h3>
+                                    <p>@(news.Date.Value.ToString("MM"))</p>
+                                </a>
+                            </div>
+
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="/Home/Detail?id=@news.Id">
+                                    <h2>@news.Title</h2>
+                                </a>
+                                <div style="overflow: hidden;display: -webkit-box; -webkit-line-clamp: 2;line-clamp: 2; -webkit-box-orient: vertical;">
+                                    @Html.Raw(news.Content)
+                                </div>
+                                <ul class="blog-info-link">
+                                    <li><a href="#"><i class="fa fa-user"></i> @news.Category</a></li>
+                                </ul>
+                            </div>
+                        </article>
+
+                    }
+                    
+
+                    <nav class="blog-pagination justify-content-center d-flex">
+                        <ul class="pagination">
+                            @for(int index = 0; index < Model.News.TotalPage; index++)
+                            {
+                                <li class="page-item">
+                                <a href="?page=@(index+1)&pageSize=5" class="page-link">@(index + 1)</a>
+                            </li>
+                            }
+                            
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="blog_right_sidebar">
+
+                    <aside class="single_sidebar_widget post_category_widget">
+                        <h4 class="widget_title">Danh mục bài viết</h4>
+                        <ul class="list cat-list">
+                            @foreach(var category in Model.Categories)
+                            {
+                                <li>
+                                    <a href="?categoryId=@category.Id" class="d-flex">
+                                        <p>@category.Name</p>
+                                        @*<p>(37)</p>*@
+                                    </a>
+                                </li>
+                            }
+                            
+                        </ul>
+                    </aside>
+
+                    @*<aside class="single_sidebar_widget popular_post_widget">
+                        <h3 class="widget_title">Recent Post</h3>
+                        <div class="media post_item">
+                            <img src="img/post/post_1.png" alt="post">
+                            <div class="media-body">
+                                <a href="single-blog.html">
+                                    <h3>From life was you fish...</h3>
+                                </a>
+                                <p>January 12, 2019</p>
+                            </div>
+                        </div>
+                        <div class="media post_item">
+                            <img src="img/post/post_2.png" alt="post">
+                            <div class="media-body">
+                                <a href="single-blog.html">
+                                    <h3>The Amazing Hubble</h3>
+                                </a>
+                                <p>02 Hours ago</p>
+                            </div>
+                        </div>
+                        <div class="media post_item">
+                            <img src="img/post/post_3.png" alt="post">
+                            <div class="media-body">
+                                <a href="single-blog.html">
+                                    <h3>Astronomy Or Astrology</h3>
+                                </a>
+                                <p>03 Hours ago</p>
+                            </div>
+                        </div>
+                        <div class="media post_item">
+                            <img src="img/post/post_4.png" alt="post">
+                            <div class="media-body">
+                                <a href="single-blog.html">
+                                    <h3>Asteroids telescope</h3>
+                                </a>
+                                <p>01 Hours ago</p>
+                            </div>
+                        </div>
+                    </aside>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
